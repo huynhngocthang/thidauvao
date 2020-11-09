@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        class Student {
+            constructor(name, email) {
+                this.name = name;
+                this.email = email;
+            }
+
+            Student() {
+                return (this.name + ',' + this.email);
+            }
+            getName() {
+                return this.name;
+            }
+            setName(name) {
+                return this.name = name;
+            }
+            getEmail() {
+                return this.email;
+            }
+            setEmail(email) {
+                return this.email = email;
+            }
+        }
+        let student1 = new Student('thanh', 'thanh@codegym.vn');
+        let student2 = new Student('hoàng', 'tien@codegym.vn');
+        let student3 = new Student('thúy', 'thuy@codegym.vn');
+        let student4 = new Student('tuấn', 'tuan@codegym.vn');
+        let student5 = new Student('bình', 'binh@codegym.vn');
+        let students = [];
+        students.push(student1);
+        students.push(student2);
+        students.push(student3);
+        students.push(student4);
+        students.push(student5);
+        console.log(students);
+        let check = false;
+        //  students[i].getName === 'hoàng' sai  ... 
+        for (let i = 0; i < students.length; i++) {
+            if (students[i].getName === 'hoàng') {
+                students[i].setEmail('hoang@codegym.vn');
+                check = true;
+            }
+        }
+        if (check === false) {
+            alert('học viên hoàng không tồn tại');
+        }
+        console.log(students);
+
+    </script>
+</body>
+
+</html>

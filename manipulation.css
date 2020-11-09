@@ -1,0 +1,71 @@
+
+
+.sandbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: hsl(186,29%,59%);
+    background-image: linear-gradient(90deg,
+                     hsl(60,100%,92%),
+                     hsl(69,83%,85%),
+                     hsl(85,65%,81%),
+                     hsl(136,43%,76%),
+                     hsl(171,44%,62%),
+                     hsl(186,50%,51%),
+                     hsl(195,65%,45%),
+                     hsl(205,69%,41%),
+                     hsl(219,64%,38%),
+                     hsl(228,64%,31%),
+                     hsl(228,64%,31%));
+}
+
+.sandbox img {
+    width: 500px;
+    height: 450px;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+img:hover {
+    cursor: crosshair;
+}
+
+.grayscale {
+    filter: grayscale(1);
+}
+
+    .grayscale:hover {
+        filter: grayscale(0);
+    }
+
+.blur {
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+}
+
+    .blur:hover {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+    }
+
+.invert {
+    -webkit-filter: invert(70%);
+    filter: invert(70%);
+}
+
+    .invert:hover {
+        -webkit-filter: invert(1);
+        filter: invert(1);
+    }
+
+.sepia {
+    -webkit-filter:sepia(1);
+    filter: sepia(1);
+}
+
+    .sepia:hover {
+        -webkit-filter:sepia(0);
+        filter: sepia(0);
+    }

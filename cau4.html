@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- dùng style dẫn tới méo hình -->
+    <canvas id="mycanvas" width="400" height= "400" style="border:1px  solid Black"></canvas>
+
+    <script>
+        let mycanvas = document.getElementById('mycanvas');
+        let ctx = mycanvas.getContext('2d');
+        class Cricle {
+            constructor(x, y, radius, color) {
+                this.x = x;
+                this.y = y;
+                this.radius = radius;
+                this.color = color;
+            }
+
+            Render(canvas) {
+                canvas.beginPath();
+                canvas.arc(cricle.x, cricle.y, cricle.radius, 0, 2 * Math.PI);
+                canvas.fillStyle = this.color;
+                canvas.fill();
+                canvas.closePath();
+            }
+        }
+        let cricle = new Cricle(40, 80, 30, '#FF3300');
+        cricle.Render(ctx);
+
+    </script>
+</body>
+
+</html>
